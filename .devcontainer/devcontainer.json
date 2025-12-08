@@ -1,0 +1,10 @@
+{
+  "name": "xv6 OSTEP Projects",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [5900],
+  "postCreateCommand": "sudo apt update && sudo apt install -y build-essential gdb qemu-system-riscv git wget xz-utils libpixman-1-dev && wget -q https://download.qemu.org/qemu-8.2.0.tar.xz && tar xf qemu-8.2.0.tar.xz && cd qemu-8.2.0 && ./configure --target-list=riscv64-softmmu && make -j$(nproc) && sudo make install && cd .. && rm -rf qemu-8.2.0* && wget -q https://static.dev.sifive.com/dev-tools/freedom-tools/v2020.12/riscv64-unknown-elf-toolchain-10.2.0-x86_64-linux-ubuntu14.tar.gz && tar xf riscv64-unknown-elf-toolchain-10.2.0-x86_64-linux-ubuntu14.tar.gz && sudo mv riscv64-unknown-elf-toolchain-10.2.0-x86_64-linux-ubuntu14 /opt/riscv && echo 'export PATH=/opt/riscv/bin:$PATH' >> ~/.bashrc"
+}
