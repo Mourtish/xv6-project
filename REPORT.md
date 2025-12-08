@@ -96,8 +96,7 @@ Ticks per ticket:
 
 ## 7. Graph
 
-[Describe your graph here - you'll need to create it]
-The graph shows CPU time allocation over time for three processes with 3:2:1 ticket ratio.
+<img width="4170" height="2381" alt="image" src="https://github.com/user-attachments/assets/c17236ed-ec23-4e8e-a0fa-723070a6e16c" />
 
 ## 8. Challenges and Solutions
 
