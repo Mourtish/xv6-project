@@ -110,30 +110,35 @@ The graph shows CPU time allocation over time for three processes with 3:2:1 tic
 
 $ lotterytest
 
-=== Lottery Scheduler Test (3:2:1 ratio) ===
+=== Lottery Scheduler Test ===
 
+Creating 3 processes with 30:20:10 tickets ratio
 
-Parent: Letting childrProcess A: PID=4, tickets=30
-en run for 5 seconds...
-Process C: PID=6, tickets=10
-Process B: PID=5, tickets=20
+Process A started: PID=4, tickets=30
+Process A: PID 4 (30 tickets)
+Process B: PID 5 (20 tickets)
+Process C: PID 6 (10 tProcess B started: PID=5, tickets=20
+Process C started: PID=6, tickets=10
+ickets)
 
-Results:
-PID     Tickets Ticks   Percentage
----     ------- -----   ----------
-4       30      1       %.1f%
-5       20      2       %.1f%
-6       10      1       %.1f%
+Letting processes run for 3 seconds...
 
-Expected ratio: 50% : 33% : 17% (3:2:1)
-Actual ratio: %.1f% : %.1f% : %.1f%
+Results after 3 seconds:
+PID     Tickets Ticks   % CPU
+---     ------- -----   ------
+4       30      283     %.1f
+5       20      144     %.1f
+6       10      60      %.1f
+
+Expected: 50% : 33% : 17% (3:2:1 ratio)
+Actual: %.1f% : %.1f% : %.1f%
 
 Ticks per ticket:
-Process A: %.2f ticks/ticket
-Process B: %.2f ticks/ticket
-Process C: %.2f ticks/ticket
+A: %.2f, B: %.2f, C: %.2f
 
-✗ FAIL: Ratio is not correct
+✓ PASS: Lottery scheduler working correctly!
 
-=== Test completed ===
+Killing test processes...
 
+=== Test complete ===
+$ QEMU: Terminated
