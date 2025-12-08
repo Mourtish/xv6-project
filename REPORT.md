@@ -1,6 +1,4 @@
 # COSC 361 Operating Systems - Project 1: Lottery Scheduler
-## Student: [Your Name]
-## Date: [Current Date]
 
 ## 1. Introduction
 Implemented a lottery scheduler in xv6 operating system as per OSTEP project requirements. 
