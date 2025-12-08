@@ -108,6 +108,7 @@ The graph shows CPU time allocation over time for three processes with 3:2:1 tic
 
 ## Appendix: Test Output
 
+```console
 $ lotterytest
 
 === Lottery Scheduler Test ===
@@ -141,4 +142,4 @@ A: %.2f, B: %.2f, C: %.2f
 Killing test processes...
 
 === Test complete ===
-$ QEMU: Terminated
+```
